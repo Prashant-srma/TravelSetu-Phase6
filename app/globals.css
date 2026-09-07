@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --travel-blue: #0b63ce;
+  --travel-blue-dark: #074b9d;
+  --travel-yellow: #ffd447;
+  --travel-ink: #10243e;
+  --travel-muted: #66768c;
+  --travel-cloud: #f5f8fc;
+  --travel-border: #e5ebf2;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--travel-ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+button, input { font: inherit; }
+a { color: inherit; text-decoration: none; }
+
+.container-page {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.hero-mountain {
+  background:
+    linear-gradient(180deg, rgba(4,28,60,.08) 0%, rgba(4,28,60,.28) 64%, rgba(4,28,60,.50) 100%),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2200&q=88") center/cover no-repeat;
+}
+
+.glass { background: rgba(255,255,255,.92); backdrop-filter: blur(14px); }
+
+.shadow-travel { box-shadow: 0 18px 45px rgba(20, 55, 95, .10); }
+
+@media (max-width: 640px) {
+  .container-page { width: min(100% - 28px, 1180px); }
+}
+
+.label {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #6f7f91;
+}
+
+.input {
+  margin-top: 8px;
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid #dfe7ef;
+  border-radius: 14px;
+  background: #fff;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #20364f;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #9cc4f3;
+  box-shadow: 0 0 0 4px rgba(11,99,206,.07);
+}
+
+/* Phase 5 — Leaflet map */
+.leaflet-container { font-family: Arial, Helvetica, sans-serif; }
+.travelsetu-pin-wrap { background: transparent !important; border: 0 !important; }
+.travelsetu-pin {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 3px solid #fff;
+  border-radius: 999px 999px 999px 6px;
+  background: var(--pin-color);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(20,55,95,.22);
+  transform: rotate(-45deg);
+}
+.travelsetu-pin-label { transform: rotate(45deg); display: block; }
+.leaflet-popup-content-wrapper { border-radius: 16px; box-shadow: 0 12px 30px rgba(20,55,95,.18); }
+.leaflet-popup-content { margin: 14px 16px; }
+.leaflet-control-zoom a { font-weight: 900; color: #20364f !important; }

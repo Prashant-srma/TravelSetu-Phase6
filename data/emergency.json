@@ -1,0 +1,26 @@
+[
+  {
+    "id": "emergency-1",
+    "name": "Police",
+    "number": "112",
+    "description": "Demo emergency contact for the TravelSetu safety screen."
+  },
+  {
+    "id": "emergency-2",
+    "name": "Ambulance",
+    "number": "108",
+    "description": "Demo emergency contact for the TravelSetu safety screen."
+  },
+  {
+    "id": "emergency-3",
+    "name": "Fire Service",
+    "number": "101",
+    "description": "Demo emergency contact for the TravelSetu safety screen."
+  },
+  {
+    "id": "emergency-4",
+    "name": "Tourist Helpline",
+    "number": "1363",
+    "description": "Demo emergency contact for the TravelSetu safety screen."
+  }
+]

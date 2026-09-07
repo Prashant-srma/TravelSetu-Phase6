@@ -1,0 +1,36 @@
+export type TravelPreference = "Nature" | "Adventure" | "Beaches" | "Culture" | "Wildlife" | "Spiritual" | "Food" | "Nightlife";
+export type FoodPreference = "Any" | "Vegetarian" | "Non-Veg" | "Vegan";
+export type TransportPreference = "Any" | "Train" | "Bus" | "Flight" | "Car";
+export type TravelStyle = "Relaxed" | "Balanced" | "Packed";
+
+export type TripForm = {
+  from: string;
+  destination: string;
+  startDate: string;
+  endDate: string;
+  travellers: number;
+  budget: number;
+  interests: TravelPreference[];
+  foodPreference: FoodPreference;
+  transport: TransportPreference;
+  travelStyle: TravelStyle;
+  accommodationPreference: string;
+  specialRequirements: string;
+};
+
+export type Destination = {
+  id: string;
+  name: string;
+  state: string;
+  category: string[];
+  latitude: number;
+  longitude: number;
+  description: string;
+  bestTime: string;
+  estimatedBudget: { budget: number; midRange: number; premium: number };
+  image: string;
+  activities: string[];
+  safetyTips: string[];
+};
+
+export type WeatherRisk = "SAFE" | "CAUTION" | "AT RISK";
